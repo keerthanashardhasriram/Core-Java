@@ -27,3 +27,33 @@ A)
     }
 }
 
+Q) ARRAY:
+A)
+  A big amount of memory which consists of sub-divisions. It is homogenous in nature. Array size is immutable.
+  ->int[] a= new int[-10];
+    System.out.println(a); //Exception in thread "main" java.lang.NegativeArraySizeException: -10
+  	at Code/Snippets.A1.main(A1.java:9)
+
+->int[] b= new int['a'];
+	System.out.println(b); //[I@378fd1ac
+
+->int[] b= new int["s"];
+	System.out.println(b);//CTE
+
+ ->int[] b= new int[0];
+	System.out.println(b);//[I@378fd1ac
+
+ ->	int[] b= new int[true];
+	System.out.println(b);//CTE
+
+  STRING:
+  valueof() is present in String class, it is a static method as it is called from its class and its return type is String.
+  char[] c= {'S','R','I','R','A','M'};
+System.out.println(c);//SRIRAM
+char[] invokes String.valueof(), it traverse the entire [] and concats it into a String
+->	
+	System.out.println(String.valueOf(b));//[I@378fd1ac
+
+toString()
+->System.out.println(Arrays.toString(b));//[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
