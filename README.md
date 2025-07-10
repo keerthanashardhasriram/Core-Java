@@ -57,3 +57,100 @@ char[] invokes String.valueof(), it traverse the entire [] and concats it into a
 toString()
 ->System.out.println(Arrays.toString(b));//[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
+TYPE CASTING:
+
+
+UP-CASTING:
+It is nothing but storing the sub class object super class reference
+Here all the super class elements are visible and accissible
+Is-a-relationship is mandatory 
+It is implicit
+ex:- Iterator
+
+DOWN-CASTING:
+In order to acheive down casting, upcasting is mandotory. Without Up-casting if we perform down casting it results in CLASSCASTEXCEPTION
+Here both the super and sub class elements are visible and accissible
+It is explicit
+ex: Cloneable Interface which is predefinrd
+
+Ex: 
+public class Sup1 {
+int s1=5;
+void eat() {
+	System.out.println("EAT");
+}
+}
+
+public class Sub1 extends Sup1{
+int s2=10;
+void drink() {
+	System.out.println("DRINK");
+}
+}
+
+public class Renner1 {
+public static void main(String[] args) {
+	Sup1 s=new Sub1();                //UP CASTING
+	System.out.println(s.s1);
+	s.eat();
+
+}
+}
+
+
+public class Renner1 {
+public static void main(String[] args) {
+	Sup1 s=new Sub1();                //UP CASTING
+	System.out.println(s.s1);
+	s.eat();
+	Sub1 sl=(Sub1) new Sup1();                  //DOWN CASTING
+	System.out.println(sl.s1);
+	System.out.println(sl.s2);
+	sl.eat();
+	sl.drink();
+}
+}
+
+Now, if we downcast without upcasting
+
+public class Renner1 {
+public static void main(String[] args) {
+	Sub1 sl=(Sub1) new Sup1();                  //DOWN CASTING
+	System.out.println(sl.s1);
+	System.out.println(sl.s2);
+	sl.eat();
+	sl.drink();
+}
+}
+
+O/P:Exception in thread "main" java.lang.ClassCastException: class Snippets.Sup1 cannot be cast to class Snippets.Sub1 (Snippets.Sup1 and Snippets.Sub1 are in module Code of loader 'app')
+	at Code/Snippets.Renner1.main(Renner1.java:9)
+
+
+WRAPPER CLASSES:
+These are the utility classes used for boxing and unboxing
+All these Wrapper classe are implemented by Comparable Interface
+Also known as Non primitive data type of the data type
+All the primitive data type includes toString(),hashCode(),equals()
+There are basically 2 ways to Boxing:
+
+1)By using Wrapper Class:
+   public class Wrap1 {
+	public static void main(String[] args) {
+		int a = 1;
+		Integer i = a;
+		System.out.println(i);
+	}
+}
+
+2) By using Constructor:
+   package Snippets;
+
+public class Wrap1 {
+	public static void main(String[] args) {
+		int a = 1;
+		Integer i = new Integer(a);
+		System.out.println(i);
+	}
+}
+
