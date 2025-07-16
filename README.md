@@ -1,3 +1,48 @@
+Operators:
+->Operators are the pre-defined symbols used to perform operations on the operands.
+->Operators give 2 types of results: *value and *type of the value
+
+ex: int a = 10, b = 20;
+    int c = a + b;
+    System.out.println(c);//30
+
+    Here, 30 is the value and type of 30 is int.
+
+Operators can be categorized into 2 types:
+->Based on number of operands and
+->Based on operations.
+
+	1) Based on number of operands : i) Unary
+ 					 ii) Binary
+       					 iii) Ternary
+
+        2) Based on operations : i) Arithmetic Operations
+				ii) Increment/Decrement
+     			       iii) Comparision/Relation
+	       			iv) Logical Operations
+	   			 v) Bitwise Operations
+				vi) Compound Assignment Operations
+
+1) Arithmetic Operations: (+,-,*,/,%)
+   -> All are binary operators
+
+2) Increment/Decrement:
+   -> It is a Unary operator
+   -> Basically 2 types of  Increment: post-increment and pre-increment
+   	pre-increment: It is incremented before its use.
+   	post-increment: It is used and then incremented.
+
+   -> Basically 2 types of  Decrement: post-decrement and pre-decrement
+   	pre-decrement: It is decremented before its use.
+   	post-decrement: It is used and then decremented.
+   
+   ex: 
+		int a=5,b=7;
+		int c= a+++b++ + ++a+b++;
+		System.out.println(c);//27
+so, when we are incrementing the variables, it first 
+
+
 Q) Differences between primitive and non-primitive
 A)
 Primitive data structure	
